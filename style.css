@@ -1,0 +1,74 @@
+:root {
+    --primary-pink: #d48b91;    /* Color Mímate: Calidez y suavidad */
+    --natura-green: #5a7d61;    /* Conexión con la naturaleza */
+    --avon-plum: #5e2750;      /* Elegancia y fuerza */
+    --background-light: #fdf8f5; /* Fondo crema para no cansar la vista */
+    --text-dark: #2d2d2d;
+    --white: #ffffff;
+}
+
+/* Estilos para el logo */
+.logo-img {
+    height: 40px; /* Ajusta el tamaño de tu logo */
+    vertical-align: middle;
+}
+
+/* Estilos para la imagen del héroe */
+.hero {
+    position: relative; /* Para posicionar la imagen correctamente */
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+}
+
+.hero-img {
+    width: 100%;
+    height: 300px; /* Ajusta la altura a tu gusto */
+    object-fit: cover; /* Recorta la imagen para que cubra el espacio */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Envía la imagen detrás del texto */
+    filter: brightness(0.7); /* Oscurece un poco la imagen para que el texto resalte */
+}
+
+.hero h1, .hero p {
+    position: relative; /* Para que el texto esté por encima de la imagen */
+    color: var(--white); /* Texto blanco para contraste */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Sombra para el texto */
+}
+
+/* Estilos para las imágenes de las tarjetas */
+.card-img {
+    width: 100%;
+    height: 150px; /* Altura fija para las imágenes de las tarjetas */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Estilos para la sección de contacto */
+.contact-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--primary-pink);
+    color: var(--white);
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.contact-btn {
+    background-color: var(--natura-green); /* O el color que prefieras para el CTA */
+    padding: 12px 30px;
+    font-size: 1.1rem;
+}
+
+.contact-btn i {
+    margin-right: 10px;
+}
