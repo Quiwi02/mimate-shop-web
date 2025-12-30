@@ -1,178 +1,451 @@
+/* Importación de tipografía moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 :root {
-    --primary-pink: #d48b91;    /* Color Mímate: Calidez y suavidad */
-    --natura-green: #5a7d61;    /* Conexión con la naturaleza */
-    --avon-plum: #5e2750;      /* Elegancia y fuerza */
-    --background-light: #fdf8f5; /* Fondo crema para no cansar la vista */
+    /* Tus colores originales de Mímate */
+    --primary-pink: #d48b91;
+    --natura-green: #5a7d61;
+    --avon-plum: #5e2750;
+    --background-light: #fdf8f5;
     --text-dark: #2d2d2d;
     --white: #ffffff;
+
+    /* Colores de soporte del diseño Baristas adaptados */
+    --primary-color: var(--primary-pink);
+    --background-color: var(--background-light);
+    --dark-color: var(--text-dark);
+}
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* Facilita el uso de rem (1rem = 10px) */
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-light);
-    color: var(--text-dark);
+    background-color: var(--background-color);
+    color: var(--dark-color);
 }
 
-/* Estilos del header */
-header {
-    background-color: var(--primary-pink);
-    padding: 10px 0;
+/* ********************************** */
+/* UTILIDADES             */
+/* ********************************** */
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-/* Estilos para el logo */
-.logo-img {
-    border-radius: 20px;
-    height: 40px; /* Ajusta el tamaño de tu logo */
-    vertical-align: middle;
-}
-
-/* Estilo del navbar */
-nav {
-    display: flex;
-    justify-content: space-between; /* Empuja el logo a la izquierda y enlaces a la derecha */
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto; /* Centra el contenido del nav */
-    padding: 0 20px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: var(--white);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Estilos para la imagen del hero */
-.hero {
-    position: relative; /* Para posicionar la imagen correctamente */
-    overflow: hidden; /* Asegura que la imagen no se desborde */
+.heading-1 {
     text-align: center;
-    padding: 60px 20px;
-    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 3rem;
+    margin: 4rem 0;
+    color: var(--avon-plum);
+}
+
+/* ********************************** */
+/* HEADER               */
+/* ********************************** */
+.container-hero {
+    background-color: var(--white);
+    border-bottom: 1px solid #eee;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.customer-support {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.customer-support i {
+    font-size: 3.3rem;
+    color: var(--primary-pink);
+}
+
+.content-customer-support {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo-img {
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.container-logo h1 a {
+    text-decoration: none;
+    color: var(--avon-plum);
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.container-user {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.container-user i {
+    font-size: 2.5rem;
+    color: var(--primary-pink);
+    cursor: pointer;
+}
+
+/* BARRA DE NAVEGACIÓN */
+.container-navbar {
+    background-color: var(--primary-pink);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.menu {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1.3rem;
     color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--avon-plum);
+}
+
+/* BUSCADOR */
+.search-form {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 2rem;
+    padding-right: 0.5rem;
+    height: 3.8rem;
+}
+
+.search-form input {
+    border: none;
+    outline: none;
+    padding: 0 1.5rem;
+    font-size: 1.3rem;
+    border-radius: 2rem;
+}
+
+.btn-search {
+    border: none;
+    background: var(--avon-plum);
+    color: white;
+    padding: 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* ********************************** */
+/* HERO BANNER / MAIN         */
+/* ********************************** */
+.hero-banner {
+    position: relative;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
 }
 
 .hero-img {
-    width: 100%;
-    height: auto; /* Ajusta la altura a tu gusto */
-    max-height: 400px; /* Limita la altura máxima */
-    object-fit: cover; /* Recorta la imagen para que cubra el espacio */
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; /* Envía la imagen detrás del texto */
-    filter: brightness(0.7); /* Oscurece un poco la imagen para que el texto resalte */
-}
-
-.hero h1, .hero p {
-    position: relative; /* Para que el texto esté por encima de la imagen */
-    color: var(--white); /* Texto blanco para contraste */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Sombra para el texto */
-}
-
-/* Estilos para las imágenes de las tarjetas */
-.grid-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Para que en celular se pongan uno abajo de otro automáticamente */
-    padding: 20px;
-}
-
-.card {
-    background: white;
-    width: 350px; /* Ancho fijo para las tarjetas */
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-    padding-bottom: 20px;
-    overflow: hidden; /* Para que la imagen respete los bordes redondeados */
-}
-
-.card-img {
     width: 100%;
-    height: 250px; /* Altura fija para las imágenes de las tarjetas */
+    height: 100%;
     object-fit: cover;
-    border-radius: 10px 10px 0 0;
-    margin-bottom: 15px;
+    z-index: -1;
+    filter: brightness(0.6);
 }
 
-/* Estilo de los botones Natura y Avon */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 25px;
+.content-banner h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+}
+
+.content-banner p {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.btn-main {
+    background-color: var(--primary-pink);
+    color: white;
     text-decoration: none;
-    font-weight: bold;
+    padding: 1.2rem 3rem;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* ********************************** */
+/* FEATURES               */
+/* ********************************** */
+.container-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    padding: 5rem 0;
+}
+
+.card-feature {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card-feature i {
+    font-size: 3rem;
+    color: var(--primary-pink);
+}
+
+.feature-content span {
+    font-weight: 700;
+    font-size: 1.4rem;
+    display: block;
+}
+
+.feature-content p {
+    color: #777;
+    font-size: 1.2rem;
+}
+
+/* ********************************** */
+/* CATEGORIES              */
+/* ********************************** */
+.container-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.card-category {
+    position: relative;
+    height: 25rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.cat-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.5);
+    transition: 0.5s;
+}
+
+.card-category:hover .cat-img {
+    transform: scale(1.1);
+}
+
+.card-category p {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* ********************************** */
+/* PRODUCT CARDS           */
+/* ********************************** */
+.container-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+
+.card-product {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card-product img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-product h3 {
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--avon-plum);
+}
+
+/* ********************************** */
+/* FOOTER               */
+/* ********************************** */
+.footer {
+    background-color: var(--primary-pink);
+    color: white;
+    padding: 5rem 0 2rem;
+    margin-top: 5rem;
+}
+
+.menu-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.title-footer {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.menu-footer ul {
+    list-style: none;
+}
+
+.menu-footer ul li {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.menu-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-footer a:hover {
+    color: var(--avon-plum);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-icons i {
+    font-size: 2rem;
+    cursor: pointer;
     transition: 0.3s;
-    margin-top: 10px;
 }
 
-#natura .btn {
-    background-color: var(--natura-green);
-    color: white;
+.social-icons i:hover {
+    transform: translateY(-5px);
 }
 
-#avon .btn {
-    background-color: var(--avon-plum);
-    color: white;
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
 }
 
-.btn:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-}
-
-/* Botón Flotante de WhatsApp */
+/* BOTÓN WHATSAPP FLOTANTE */
 .whatsapp-float {
     position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
+    bottom: 3rem;
+    right: 3rem;
     background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    z-index: 100;
+    color: white;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 3rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2000;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 .whatsapp-float:hover {
     transform: scale(1.1);
     background-color: #128c7e;
-    color: white;
 }
 
-/* Animación de pulso para llamar la atención */
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-}
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
 
-.whatsapp-float {
-    animation: pulse 2s infinite;
-}
+    .container-features,
+    .menu-footer {
+        grid-template-columns: 1fr;
+    }
 
-footer {
-    background-color: var(--text-dark);
-    color: var(--white);
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+    .container-hero .hero {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    /* Aquí podrías agregar un menú hamburguesa */
 }

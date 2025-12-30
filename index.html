@@ -5,68 +5,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mímate Shop</title>
-    <!-- icono -->
     <link rel="shortcut icon" href="img/icono.jpg" type="image/x-icon">
-    <!-- estilos -->
     <link rel="stylesheet" href="style.css">
-    <!-- fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <img src="img/icono.jpg" alt="Mímate Shop" class="logo-img">
+        <div class="container-hero">
+            <div class="container hero">
+                <div class="customer-support">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="content-customer-support">
+                        <span class="text">Asesoría Personalizada</span>
+                        <span class="number">Tu número aquí</span>
+                    </div>
+                </div>
+
+                <div class="container-logo">
+                    <img src="img/icono.jpg" alt="Mímate Shop" class="logo-img">
+                    <h1 class="logo"><a href="#">Mímate Shop</a></h1>
+                </div>
+
+                <div class="container-user">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="content-shopping-cart">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span class="text">Carrito</span>
+                        <span class="number">(0)</span>
+                    </div>
+                </div>
             </div>
-            <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Natura</a></li>
-                <li><a href="#">Avon</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
+        </div>
+
+        <div class="container-navbar">
+            <nav class="navbar container">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="menu nav-links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Natura</a></li>
+                    <li><a href="#">Avon</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+
+                <form class="search-form">
+                    <input type="search" placeholder="Buscar productos..." />
+                    <button class="btn-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section class="hero">
-            <img src="img/banner.png" alt="banner principal" class="hero-img"> <h1>Tu bienestar, nuestra prioridad</h1>
-            <p>Encuentra lo mejor de Natura y Avon en un solo lugar.</p>
+
+    <main class="main-content">
+        <section class="hero-banner">
+            <img src="img/banner.png" alt="banner principal" class="hero-img">
+            <div class="content-banner">
+                <h1>Tu bienestar, nuestra prioridad</h1>
+                <p>Encuentra lo mejor de Natura y Avon en un solo lugar.</p>
+                <a href="#productos-db" class="btn-main">Ver Productos</a>
+            </div>
         </section>
 
-        <section id="marcas" class="grid-container">
-            <article id="natura" class="card">
-                <h2>Natura</h2>
-                <p>Belleza que cuida del planeta.</p>
-                <a href="https://short.natura.com/cDy2snU" class="btn">Comprar Natura</a>
-                <img src="img/natura.jpg" alt="Productos Natura" class="card-img">
-            </article>
-
-            <article id="avon" class="card">
-                <h2>Avon</h2>
-                <p>Mira de nuevo: Calidad e innovación.</p>
-                <a href="https://short.natura.com/cDy2snU" class="btn">Ver Catálogo Avon</a>
-                <img src="img/avon.jpg" alt="Productos Avon" class="card-img">
-            </article>
+        <section class="container container-features">
+            <div class="card-feature">
+                <i class="fa-solid fa-plane-up"></i>
+                <div class="feature-content">
+                    <span>Envíos a todo el país</span>
+                    <p>Entrega rápida y segura</p>
+                </div>
+            </div>
+            <div class="card-feature">
+                <i class="fa-solid fa-wallet"></i>
+                <div class="feature-content">
+                    <span>Pago Seguro</span>
+                    <p>Aceptamos Yape, Plin y Efectivo</p>
+                </div>
+            </div>
+            <div class="card-feature">
+                <i class="fa-solid fa-gift"></i>
+                <div class="feature-content">
+                    <span>Empaque de Regalo</span>
+                    <p>Personalizamos tus detalles</p>
+                </div>
+            </div>
         </section>
 
-        <section id="contacto" class="contact-section">
-            <h2>¿Tienes preguntas? ¡Contáctanos!</h2>
-            <p>Escríbenos por WhatsApp para asesoría personalizada.</p>
-            <a href="https://wa.me/message/ES62HSAPWDSZN1"
-                class="whatsapp-btn" target="_blank">
-                <i class="fab fa-whatsapp"></i>
-            </a>
+        <section id="marcas" class="container top-categories">
+            <h1 class="heading-1">Nuestras Marcas</h1>
+            <div class="container-categories">
+                <article id="natura" class="card-category">
+                    <img src="img/natura.jpg" alt="Natura" class="cat-img">
+                    <p>Natura</p>
+                    <a href="https://short.natura.com/cDy2snU" class="btn">Ver Catálogo</a>
+                </article>
+                <article id="avon" class="card-category">
+                    <img src="img/avon.jpg" alt="Avon" class="cat-img">
+                    <p>Avon</p>
+                    <a href="https://short.natura.com/cDy2snU" class="btn">Ver Catálogo</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="productos-db" class="container top-products">
+            <h1 class="heading-1">Nuevos Ingresos</h1>
+            <div id="contenedor-productos" class="container-products">
+            </div>
+        </section>
+
+        <section id="admin-panel" class="container"
+            style="margin-top: 50px; border-top: 2px solid #eee; padding-top: 20px;">
+            <h3>Añadir Producto (Admin)</h3>
+            <div class="admin-form" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <input type="text" id="input-nombre" placeholder="Nombre del producto">
+                <input type="number" id="input-costo" placeholder="Costo S/">
+                <input type="number" id="input-venta" placeholder="Venta S/">
+                <input type="file" id="input-foto">
+                <button onclick="publicarNuevoProducto()" class="btn">Subir Producto</button>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Mímate Shop - Desarrollado por Quiverli</p>
+    <footer class="footer">
+        <div class="container container-footer">
+            <div class="menu-footer">
+                <div class="contact-info">
+                    <p class="title-footer">Contacto Mímate Shop</p>
+                    <ul>
+                        <li>Dirección: Tu ciudad, Perú</li>
+                        <li>Teléfono: 123-456-7890</li>
+                        <li>Email: mimateshop@correo.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://wa.me/message/ES62HSAPWDSZN1" class="whatsapp" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <span class="facebook"><i class="fa-brands fa-facebook-f"></i></span>
+                        <span class="instagram"><i class="fa-brands fa-instagram"></i></span>
+                    </div>
+                </div>
+
+                <div class="information">
+                    <p class="title-footer">Información</p>
+                    <ul>
+                        <li><a href="#">Acerca de Nosotros</a></li>
+                        <li><a href="#">Envíos</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+
+                <div class="my-account">
+                    <p class="title-footer">Servicio</p>
+                    <ul>
+                        <li><a href="#">Lista de deseos</a></li>
+                        <li><a href="#">Reembolsos</a></li>
+                    </ul>
+                </div>
+
+                <div class="newsletter">
+                    <p class="title-footer">Ofertas Exclusivas</p>
+                    <div class="content">
+                        <p>Suscríbete para recibir los nuevos catálogos de Natura y Avon.</p>
+                        <input type="email" placeholder="Tu correo aquí...">
+                        <button class="btn">Suscríbete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 Mímate Shop - Desarrollado por Quiverli</p>
+                <img src="img/payment.png" alt="Pagos">
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <a href="https://wa.me/message/ES62HSAPWDSZN1" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
